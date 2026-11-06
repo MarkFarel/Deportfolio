@@ -136,16 +136,18 @@
       </div>
 
       <div class="flex items-center space-x-2 sm:space-x-3">
-        <!-- Theme Select Dropdown -->
-        <select id="theme-selector" onchange="changeTheme(this.value)" 
-                class="theme-card text-xs sm:text-sm px-2.5 py-1.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer">
-          <option value="slate-glass">✨ Modern Slate</option>
-          <option value="executive">👔 Executive</option>
-          <option value="cyber-neon">⚡ Cyber Neon</option>
-          <option value="warm-academic">📚 Warm Academic</option>
-          <option value="editorial">📰 Editorial</option>
-          <option value="sunset-gold">🌅 Sunset Gold</option>
-        </select>
+        <!-- Theme Select Dropdown (Only visible in admin mode) -->
+        <div class="admin-only hidden">
+          <select id="theme-selector" onchange="changeTheme(this.value)" 
+                  class="theme-card text-xs sm:text-sm px-2.5 py-1.5 rounded-lg border focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer">
+            <option value="slate-glass">✨ Modern Slate</option>
+            <option value="executive">👔 Executive</option>
+            <option value="cyber-neon">⚡ Cyber Neon</option>
+            <option value="warm-academic">📚 Warm Academic</option>
+            <option value="editorial">📰 Editorial</option>
+            <option value="sunset-gold">🌅 Sunset Gold</option>
+          </select>
+        </div>
 
         <!-- Admin Toggle Button (Only visible in admin mode) -->
         <button id="admin-toggle-btn" onclick="toggleAdminMode()" title="Toggle Admin Mode"
